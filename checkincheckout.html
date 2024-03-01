@@ -1,0 +1,44 @@
+<html>
+    <head></head>
+    <body>
+        <h1>Check in:<span id="d3"></span></h1>
+        <h1>Check out:<span id="d4"></span></h1>
+
+        <button onclick="start()">Start</button>
+        <button onclick="stop()">Stop</button>
+        <button onclick="totalTime()">total getTime</button>
+        <span id="d1"></span>
+        
+        <script>
+            var d,startTime;
+            var d2,endTime;
+            var total;
+            var result=document.getElementById('d1');
+            var start1=document.getElementById('d3');
+            var end1=document.getElementById('d4');
+           
+          function start(){
+             d=new Date();
+             var start2=new Date().getLocaleDateString();
+             console.log(start2)
+             startTime=d.getTime(); 
+             start1.innerHTML=startTime; 
+            //  console.log(startTime)
+          }
+          function stop(){
+            d2=new Date();
+             endTime=d2.getTime();
+             end1.innerHTML=endTime;
+            //  console.log(endTime)
+            
+          }
+          function totalTime(){
+            total=endTime-startTime;
+            result.innerHTML=total/(1000*60)+"Minutes"
+            
+          }
+
+    
+        </script>
+    </body>
+</html>

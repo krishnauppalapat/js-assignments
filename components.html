@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+       <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+       <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="d2">
+
+        </div>
+        <div id="d3">
+
+        </div>
+        <script type="text/babel">
+            // var newName=<div>
+            //           <MyI></MyI>
+            //           <Myname></Myname>
+            //     </div>
+
+            //     function MyI(){
+            //         return<i>Software Developer</i>
+            //     }
+            // function Myname(){
+            //     return <h1>Hello,sai uppalapati</h1>
+            // }
+            // ReactDOM.render(<Myname></Myname>,document.getElementById('d2'))
+            // ReactDOM.render(newName,document.getElementById('d2'))
+            
+
+            function Mycounter(){
+                var [count,newC]=React.useState(0);
+                function inc(){
+                    newC(count+1);
+                }
+                function dec(){
+                    newC(count-1);
+                }
+                function reset(){
+                    newC(0)
+                }
+                return(
+                    <div>
+                        <h1>Counter:{count}</h1>
+                       <button onClick={()=>{inc()}}>Increment</button>
+                       <button onClick={()=>{dec()}}>Decrement</button>
+                       <button onClick={()=>{reset()}}>Reset</button>
+                        </div>
+                )
+            }
+            ReactDOM.render(<Mycounter></Mycounter>,document.getElementById('d2'))
+            function Newcount(){
+                return(
+                    <div>
+                        <Mycounter></Mycounter>
+                        </div>
+                )
+            }
+            ReactDOM.render(<Newcount></Newcount>,document.getElementById('d3'))
+        </script>
+    </body>
+</html>

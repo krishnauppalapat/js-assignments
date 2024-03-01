@@ -1,0 +1,90 @@
+<html>
+
+<head>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+
+<body>
+    <div id="dd">
+
+    </div>
+    <!-- <script type='text/babel'>
+      var Abc=function(){
+        return(
+            <div>
+              <h1>welcome to React</h1>
+                </div>
+        )
+      } -->
+      <script type="text/babel">
+        
+      // var Abc=function(){
+      //   var x=30;
+      //   return(
+      //     <h1>{x}</h1>
+
+      //   )
+      // }
+    //   var arr=[10,20,30,40];
+    //  var Abc=function(){
+    //     return(
+    //    arr.map((a)=>{
+    //     return(
+    //       <h1>{a}</h1>
+    //     )
+
+    //    })
+    //     )
+    //   }
+    //   ReactDOM.render(<Abc></Abc>,dd)
+    // function Abc(){
+    //   function edu(){
+    //     alert('edupoly')
+    //   }
+    //   return(
+    //     <div>
+    //       <button onClick={edu}>Click here to see alert</button>
+    //       </div>
+    //   )
+    // }
+    // function Abc(){
+    //   function edu(e){
+    //     console.log(e)
+    //   }
+    //   return(
+    //     <button onClick={(event)=>{edu(event)}}>Click here to see alert</button>
+    //   )
+    // }
+    function  Abc(){
+      var[data,setData]=React.useState([]);
+      function addTodo(){
+        setData([...data,(document.getElementById('inp').value)]);
+        document.getElementById('inp').value='';
+        console.log(data)
+      }
+      function del(i){
+        var updatedTasks=[...data];    
+        updatedTasks.splice(i,1);
+        setData(updatedTasks)
+      }
+
+      return(
+        <div>
+          <input type='text' id='inp'/>
+          <button onClick={()=>{addTodo()}}>Add Task</button>
+          <ul>
+            {
+              data.map((a,i)=>{
+               return <li>{a} {'  '}<button onClick={()=>{del(i)}}>Delete</button></li>
+              })
+            }
+            </ul>
+          </div>
+      )
+    }
+    ReactDOM.render(<Abc></Abc>,dd)
+    </script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<html>
+    <head></head>
+    <body>
+        <form name="userForm" onsubmit="event.preventDefault()">
+            <div>
+            <label>Firstname:</label>
+            <input type="text" name="Firstname">
+        </div>
+        <div>
+            <label>Lastname:</label>
+            <input type="text" name="Lastname">
+        </div>
+        <div>
+            <input type="radio" name="Gender" value="Male"><label>Male</label>
+            <input type="radio" name="Gender" value="Female"><label>Female</label>
+            <input type="radio" name="Gender" value="Others"><label>Others</label>
+        </div>
+        <div>
+            <input type="checkbox" name="languages" value="Telugu"><label>Telugu</label>
+            <input type="checkbox" name="languages" value="Hindi"><label>Hindi</label>
+            <input type="checkbox" name="languages" value="English"><label>English</label>
+            <input type="checkbox" name="languages" value="Marati"><label>Marati</label>
+        </div>  
+            <button onclick="userData()">Save</button>
+
+
+        </form>
+        <table border="2px">
+            <thead>
+                <tr>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Gender</th>
+                    <th>languages</th>
+                </tr>
+            </thead>
+            <tbody id="tb">
+            </tbody>
+        </table>
+        <script>
+            var tbd=document.getElementById('tb');
+            var users=[];
+                function userData(){
+                    // console.log(userForm.Firstname.value);
+                    // console.log(userForm.Lastname.value);
+                    // console.log(userForm.Gender.value);
+                    // console.dir(userForm.languages)
+                    var lang=[];
+                    for(var i=0;i<=userForm.languages.length-1;i++){
+                        if(userForm.languages[i].checked==true){
+                            lang.push(userForm.languages[i].value)
+
+                        }
+                    
+                    }
+                    // console.log(lang)
+                    var obj1={
+                        fname:userForm.Firstname.value,
+                        lname:userForm.Lastname.value,
+                        gender:userForm.Gender.value,
+                        languages:lang
+                    }
+                    users.push(obj1);
+                    genTable(users);
+
+                }
+                function genTable(){
+                    tbd.innerHTML="";
+                    users.forEach(function(user){
+                        newtr=document.createElement('tr');
+                       newtd1=document.createElement('td');
+                        newtd1.innerHTML=user.fname;
+                        newtr.appendChild(newtd1);
+                        console.log(newtr)
+
+                        newtd2=document.createElement('td');
+                        newtd2.innerHTML=user.lname;
+                        newtr.appendChild(newtd2)
+
+                      newtd3=document.createElement('td');
+                        newtd3.innerHTML=user.gender;
+                        newtr.appendChild(newtd3)
+                    
+                       newtd4=document.createElement('td');
+                        newtd4.innerHTML=user.languages;
+                        newtr.appendChild(newtd4);
+
+                        tbd.appendChild(newtr);
+
+
+
+                    })
+                }
+                
+        </script>
+    </body>
+</html>

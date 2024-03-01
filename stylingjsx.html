@@ -1,0 +1,190 @@
+<html>
+
+<head>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+
+<body>
+   <div id="d3"></div>
+    <script type="text/babel">
+        // var vh1 = <h1 style={{ color: "red",backgroundColor:"green" }}>red color to h1</h1>
+        // ReactDOM.render(vh1, document.getElementById('d1'))
+        // Display each array element in flex boxes
+        // var arr=[10,20,30,40];
+        // var displayList=<ul style={{display:'flex'}}>
+        //     {
+        //         arr.map((a)=>{
+        //           return  <li style={{margin:"10px",listStyle:"none"}}>{a}</li>
+        //         })
+        //     }
+        //     </ul>
+        // Display each string of array in flex boxes
+        // var s=['sai','sri','sandeep','karim'];
+        // var newdata=<ul style={{display:"flex"}}>
+        //     {
+        //         s.map((a)=>{
+        //             return <li style={{padding:"10px",listStyle:"none"}}>{a}</li>
+
+        //         })
+        //     }
+        //     </ul>
+
+        //     ReactDOM.render(newdata,document.getElementById('d1'));
+        // Display each object properties
+        // const person = {
+        //     firstName: "Sai",
+        //     Gender: "Male",
+        //     age: 26,
+        //     eyeColor: "blue"
+        // };
+        // var newList=<div style={{border:"1px solid black"}}>
+        //          <h1>Name:{person.firstName}</h1>
+        //          <h3>Gender:{person.Gender}</h3>
+        //          <i>Age:{person.age}</i>
+        //     </div>
+
+        //     ReactDOM.render(newList,document.getElementById('d1'));
+
+        // const person = [{
+        //     firstName: "Sai",
+        //     lastName: "Krishna",
+        //     Gender: "Male",
+        //     age: 26,
+        // },
+        // {
+        //     firstName: "Sri",
+        //     lastName: "kanth",
+        //     Gender: "Male",
+        //     age: 23,
+        // },
+        // {
+        //     firstName: "Phani",
+        //     lastName: "Uppalapati",
+        //     Gender: "Male", 
+        //     age: 30,
+        // }
+        // ]
+        // var newItem = <div style={{display:'flex',}}>
+        //     {
+        //         person.map((p) => {
+        //             return (
+        //                 <div style={{border: '1px solid', width: '300px', margin: '10px' }}>
+        //                     <div style={{ backgroundColor: "pink", width: "250px", margin: '5px' }}>
+        //                         <h2>First Name:{p.firstName}</h2>
+        //                         <h2>Last Name:{p.lastName}</h2>
+        //                         <h2>Gender:{p.Gender}</h2>
+        //                         <h2>Age:{p.age}</h2>
+        //                     </div>
+        //                 </div>
+        //             )
+
+        //         })
+        //     }
+        // </div>
+        // ReactDOM.render(newItem, document.getElementById('d6'))
+
+        // Display each array object in flex boxes with respective gender images
+        var users = [
+            {
+                firstName: "Sai",
+                lastName: "Krishna",
+                Gender: "Male",
+                age: 26,
+            },
+            {
+                firstName: "Sri",
+                lastName: "kanth",
+                Gender: "Male",
+                age: 23,
+            },
+            {
+                firstName: "Phani",
+                lastName: "Uppalapati",
+                Gender: "Male",
+                age: 30,
+            },
+            {
+                firstName: "sandhya",
+                lastName: "Uppalapati",
+                Gender: "Female",
+                age: 21,
+
+            }
+        ]
+        // var newData=<div style={{display:'flex'}}>
+        //     {
+        //         users.map((user)=>{
+        //             return(
+        //                 <div style={user.Gender=="Male"?{backgroundColor:"lightblue",width:"200px",heigth:"200px",margin:'10px'}:{backgroundColor:"pink",width:"200px",heigth:"200px",margin:'10px'}}>
+        //                     {user.Gender==="Male"&& <img src="https://cdn1.iconfinder.com/data/icons/user-pictures/101/malecostume-512.png" style={{width:"200px",height:"200px"}}/>}
+        //                     {user.Gender==="Female"&&<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRg6TdT3JMtGqIF0xYmNsApf2AI3gzC7GtV2etg-yvM7A&s" style={{width:"200px",height:"200px"}}/>}
+        //                     <h3>firstName:{user.firstName}</h3>
+        //                     <h3>lastName:{user.lastName}</h3>
+        //                     <h3>Age:{user.age}</h3>
+        //                     <h3>Gender:{user.Gender}</h3>
+        //                     </div>
+        //             )
+
+        //         })
+        //     }
+        //     </div>
+        //     ReactDOM.render(newData,document.getElementById('d6'))
+
+//         var newTable=<table border="1">
+//             <thead>
+//                 <tr>
+//                     <td>FirstName</td>
+//                     <td>lastName</td>
+//                     <td>Gender</td>
+//                     <td>Age</td>    
+//                     </tr>
+//                 </thead>
+//                 <tbody>
+//                     {
+//                         users.map((user)=>{
+//                             return(
+//                             <tr style={user.Gender=='Female'?{backgroundColor:'pink'}:{backgroundColor:'blue'}}>
+//                                 <td>{user.firstName}</td>
+//                                 <td>{user.lastName}</td>
+//                                 <td>{user.Gender}</td>
+//                                 <td>{user.age}</td>
+//                                 </tr>
+//                             )
+//                         })
+//                     }
+//                     </tbody>
+//             </table>
+//         ReactDOM.render(newTable, document.getElementById('d3'))
+
+// Apply the color name stored in a variable to JSX h1
+// var vh1='yellow'
+// var vh2="green"
+// var bwidth='5px solid'
+// var c=-1
+// var even='green'
+// var odd='red'
+// var newh1=<div>
+// <h1 style={{color:vh1}}>Hello,sai</h1>
+// <h1 style={{border:bwidth}}>Hello,React</h1>
+// <h1 style={c%2==0 ?{color:even}:{color:odd}}>{c}</h1>
+// <h1 style={c>=0?{color:even}:{color:odd}}>Hello,Java script</h1>
+// </div>
+var str=['sai','srikanth','swamy','sairam','kavya']
+var even='green';
+var odd='red';
+var newList=<ul>
+    {
+        str.map((a)=>{
+            return(
+                <li style={str.length%2==0?{color:even}:{color:odd}}>{a}</li>
+            )
+        })
+    }
+    </ul>
+
+ReactDOM.render(newList,document.getElementById('d3'));
+    </script>
+</body>
+ </html>

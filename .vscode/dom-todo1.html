@@ -1,0 +1,119 @@
+<html>
+
+<head></head>
+
+<body>
+    <form name="studentForm" onsubmit="event.preventDefault()">
+        <div>
+            <label>Firstname:</label>
+            <input type="text" name="Firstname" >
+        </div>
+        <div>
+            <label>Lastname:</label>
+            <input type="text" name="Lastname">
+        </div>
+        <div>
+            <label>Gender:</label>
+            <input type="radio" name="gender" value="male"><label>Male</label>
+            <input type="radio" name="gender" value="female"><label>Female</label>
+            <input type="radio" name="gender" value="others"><label>Others</label>
+        </div>
+        <div>
+            <label>Languages:</label>
+            <input type="checkbox" name="languages" value="telugu"><label>Telugu</label>
+            <input type="checkbox" name="languages" value="english"><label>English</label>
+            <input type="checkbox" name="languages" value="hindi"><label>Hindi</label>
+            <input type="checkbox" name="languages" value="spanish"><label>Spanish</label>
+            <input type="checkbox" name="languages" value="french"><label>French</label>
+        </div>
+        <div>
+            <label>Nationality:</label>
+            <select name="nation">
+                <option disabled selected value="please select">Please select</option>
+                <option  value="india">India</option>
+                <option  value="others">Others</option>
+                </select>
+        </div>
+        <button onclick="saveData()">Save</button>
+    </form>
+    <table border="2px">
+        <thead>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Gender</th>
+            <th>Languages</th>
+            <th>Nationality</th>
+        </thead>
+        <tbody id="tb">
+
+        </tbody>
+
+    </table>
+    <script>
+        var users=[];
+        var tbd=document.getElementById("tb")
+        function saveData(){
+           
+        //   console.log(studentForm.Firstname.value);
+        //   console.log(studentForm.Lastname.value);
+        //   console.log(studentForm.gender.value);
+        //    console.log(studentForm.languages.value);
+        //    console.log(studentForm.languages);
+        //    console.log(studentForm.select.value)
+          var lang=[];
+         for(var i=0;i<=studentForm.languages.length-1;i++){
+            // console.log(studentForm.languages[i].checked);
+            if(studentForm.languages[i].checked===true){
+                lang.push(studentForm.languages[i].value);
+
+            }
+          
+         }
+         console.log(lang)
+
+         var obj1={
+                fName:studentForm.Firstname.value,
+                lName:studentForm.Lastname.value,
+                gender:studentForm.gender.value,
+                languages:lang,
+                nationality:studentForm.nation.value
+            }
+            console.log(obj1);
+            users.push(obj1);
+            console.log(users)
+            genTable(users);
+
+        }
+        function genTable(arr){
+            tbd.innerHTML="";
+            arr.forEach(function(user){
+                var newtr=document.createElement('tr');
+                var td1=document.createElement('td');
+                td1.innerHTML=user.fName;
+                newtr.appendChild(td1);
+
+                var td2=document.createElement('td');
+                td2.innerHTML=user.lName;
+                newtr.appendChild(td2)
+
+                var td3=document.createElement('td');
+                td3.innerHTML=user.gender;
+                newtr.appendChild(td3)
+
+                var td4=document.createElement('td');
+                td4.innerHTML=user.languages;
+                newtr.appendChild(td4)
+
+                var td5=document.createElement('td');
+                td5.innerHTML=user.nationality;
+                newtr.appendChild(td5)
+
+                tbd.appendChild(newtr);
+            })
+        }
+
+          
+    </script>
+</body>
+
+</html>

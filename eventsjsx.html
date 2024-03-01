@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    </head>
+    <body>
+        <!-- <h1 onclick="abc()">Edupoly</h1> -->
+        <div id="d1">
+
+        </div>
+        <script type="text/babel">
+            // function abc(){
+            //     console.log(alert('hi'))
+            // }
+            // var newh1=<h1 onClick={()=>{abc()}}>Edupoly</h1>
+            // ReactDOM.render(newh1,document.getElementById('d1'))
+            function abc(e){
+                console.log(e)
+            }
+            var btnnew=<button onClick={(event)=>{abc(event)}}>Click me</button>
+            ReactDOM.render(btnnew,document.getElementById('d1'))
+
+        </script>
+    </body>
+</html>

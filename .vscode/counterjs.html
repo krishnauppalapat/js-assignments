@@ -1,0 +1,25 @@
+<html>
+    <head></head>
+    <body>
+        <h1>Hello,Javascript</h1>
+        <h2>Counter:<span id="dd"></span></h2>
+        <button onclick="inc()">Increment</button>
+        <button onclick="dec()">Decrement</button>
+        <script>
+            var c=0;
+            document.getElementById("dd").innerHTML=c;
+            function inc(){
+                c++;
+                document.getElementById("dd").innerHTML=c
+            }
+            function dec(){
+                c--;
+                document.getElementById("dd").innerHTML=c
+
+            }
+
+
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <body>
+            <div id="parentDiv">
+                <h1>Add Contact Cards with CRUD operations,sorting and filtering</h1>
+                <h3>Name:<input type="text" id="name1"></h3>
+                <h3>Number:<input type="number" id="num1"></h3>
+                <h3>Email:<input type="email" id="email1"></h3>
+                <h3>Image:<input type="file" id="img1"></h3>
+                <img src="" id="sri"/>
+                <button id="blueBtn" onclick="add()">Add Contact</button>
+            </div>
+            <div id="main-card">
+
+            </div>
+            <script>
+                var parentDiv=document.getElementById('parentDiv');
+                var blueBtn=document.getElementById('blueBtn');
+                blueBtn.style.backgroundColor='blue';
+                blueBtn.style.color='white'
+
+                parentDiv.style.textAlign='center'
+                 var mainCard=document.createElement('div')
+                var newName=document.getElementById('name1');
+                var newNum=document.getElementById('num1');
+                var newEmail=document.getElementById('email1');
+                var newImg=document.getElementById('img1');
+                var newImg2=document.getElementById('sri');
+                console.dir(newImg)
+                var blueBtn=document.getElementById('button')
+                var Persons=[]
+                
+                function add(){
+
+                    var obj={
+                    newName1:newName.value,
+                    newNum1:newNum.value,
+                    newEmail1:newEmail.value,
+                    newImg1:newImg.value,
+                }
+                newImg2.src=newImg.value
+                Persons.push(obj)
+                // console.log(Persons);
+                genData(Persons)
+                }
+
+       function genData(arr){
+        arr.forEach(function(a){
+            var childDiv=document.createElement('div');
+            childDiv.style.border="1px solid red";
+            childDiv.style.backgroundColor="yellow";
+            childDiv.style.height='200px';
+            childDiv.style.width='300px';
+            mainCard.appendChild(childDiv)
+        
+            var createImg=document.createElement('img');
+            createImg.src=a.newImg1;
+            createImg.style.height='100px';
+            createImg.style.width='200px';
+            createImg.style.borderRadius='50%';
+              childDiv.appendChild(createImg)
+
+
+
+            
+
+        })
+
+       }
+
+
+
+                
+            </script>
+        </body>
+    </head>
+</html>

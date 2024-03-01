@@ -1,0 +1,226 @@
+<html>
+
+<head>
+    <style>
+        #main-div {
+            color: white;
+            font-family: "antiquewhite";
+            background: linear-gradient(rgb(248, 43, 77), rgba(255, 166, 0, 0.842));
+            height: 200px;
+            width: 80%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+
+        #colorBtn {
+            color: white;
+            background-color: rgb(255, 0, 230);
+            border-radius: 5px;
+            border: 0px;
+            font-size: 10px;
+            height: 100px;
+            width: 100px;
+            padding: 5px;
+            text-align: center;
+            margin-top:15px;
+            margin-left:20px;
+        }
+
+        .spanStyle {
+            background-color: darkgoldenrod;
+            color: white;
+            border-radius: 10px;
+            padding: 2px 10px;
+            margin:5px;
+
+        }
+
+
+        .text-box {
+            display: block;
+            width: 1000px;
+            height: 40px;
+            margin-left: 140px;
+            margin-top: 10px;
+        }
+
+        #middle-one {
+            display: flex;
+            flex-direction: row;
+
+        }
+        .btn-blue{
+            background-color: blueviolet;
+            height:auto;
+            width: auto;
+            padding:10px;
+            color:white;
+            font-weight: bold;
+            border: 0px;
+            border-radius: 10px;
+            margin-right: 10px;
+        }
+        .marginLeft{
+            margin-left:20px
+        }
+    </style>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <div id="main-div">
+        <h1 class="marginLeft">Edupoly Todolist</h1>
+        <div>
+            <button class="btn-blue">All<span class="spanStyle" id="all1">0</span></button>
+            <button class="btn-blue">Completed<span class="spanStyle" id="done1">0</span></button>
+            <button class="btn-blue">Pending<span class="spanStyle" id="pn">0</span></button>
+        </div>
+    </div>
+    <div id="middle-one">
+        <div>
+            <input type="text" placeholder="Enter Title" class="text-box" id="data1"><br>
+            <input type="text" placeholder="Enter description" class="text-box" id="data2">
+        </div>
+        <div>
+            <button id="colorBtn" onclick="addList()">+</button>
+        </div>
+    </div>
+    <div>
+        <h1 style="margin-left:140px;">All Todos</h1>
+        <div id='new-list'>
+
+        </div>
+    </div>
+
+    <script>
+        var newList = document.getElementById('new-list');
+        var newData1 = document.getElementById('data1');
+        var newData2 = document.getElementById('data2');
+        var all=document.getElementById('all1');
+        var newDone=document.getElementById('done1');
+        var pn1=document.getElementById('pn');
+        var completed=0;
+
+
+        var arr = []
+        var currentInd;
+
+        function addList() {
+            var obj = {
+                title: newData1.value,
+                description: newData2.value,
+                completed:false
+            }
+            arr.push(obj)
+            console.log(arr)
+            genData(arr)
+            pn1.innerHTML=arr.length;
+            newDone.innerHTML=completed;
+
+        }
+        function genData(array) {
+            newList.innerHTML="";
+
+            array.forEach(function (a, ind) {
+                var newDiv = document.createElement('div');
+                newDiv.style.heigth = "auto";
+                newDiv.style.width = '80%';
+                newDiv.style.backgroundColor =  a.completed ? 'lightgreen' : 'grey';
+                newDiv.style.display='flex';
+                newDiv.style.flexDirection='row';
+                newDiv.style.justifyContent='space-evenly'
+                newDiv.style.margin='auto';
+                newDiv.style.marginBottom='10px'
+
+                newDiv.style.position='relative'
+
+                var newp1=document.createElement('p');
+                newp1.innerHTML="pending";
+                newDiv.appendChild(newp1);
+                // newp1.classList.remove('bi')
+                // newp1.classList.remove('bi-check')
+
+
+                var newh3=document.createElement('h3');
+                newh3.innerHTML=a.title;
+                newDiv.appendChild(newh3)
+                var newp=document.createElement('p');
+                newp.innerHTML=a.description;
+                newDiv.appendChild(newp);
+
+                var newh4=document.createElement('h4');
+                var x=new Date().toLocaleDateString();
+                newh4.innerHTML=x;
+                newDiv.appendChild(newh4)
+                
+
+
+                var doneBtn=document.createElement('button');
+                doneBtn.innerHTML='Done';
+                doneBtn.style.height='20px';
+                doneBtn.style.marginTop='15px'
+                doneBtn.onclick=function(){
+                    if(doneBtn.innerHTML=='Done'){
+                        newp1.innerHTML="";
+                        newDone.innerHTML=completed+1;
+                        
+                        newp1.classList.add('bi');
+                        newp1.classList.add('bi-check-square-fill');
+                        newp1.style.color='green';
+                        doneBtn.innerHTML='Undo';
+                        // newp1.style.display='none'
+                    }
+                    else{
+                        newp1.classList.remove('bi');
+                        newp1.classList.remove('bi-check-square-fill');
+                        
+                        doneBtn.innerHTML='Done';
+                        newp1.innerHTML='pending';
+                        newp1.style.color='';
+
+
+                    }
+                }
+                newDiv.appendChild(doneBtn)
+
+
+
+                var newBtn=document.createElement('span');
+                newBtn.onclick=function(){
+                    currentInd=ind;
+                    array.splice(ind,1)
+                    genData(arr);
+                    all.innerHTML=arr.length;
+
+                }
+                newBtn.classList.add("bi");
+                newBtn.classList.add("bi-x-square");
+                newBtn.style.position='absolute';
+                newBtn.style.top='0px';
+                newBtn.style.right='0px'
+                newBtn.style.color='red';
+                newBtn.style.fontSize='40px';
+                newBtn.style.marginTop='5px'
+                newDiv.appendChild(newBtn);
+     
+
+                all.innerHTML=arr.length;
+                
+                
+
+
+                newList.appendChild(newDiv)
+
+            })
+
+        }
+
+    </script>
+</body>
+
+</html>

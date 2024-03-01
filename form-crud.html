@@ -1,0 +1,124 @@
+<html>
+    <head>
+    </head>
+    <body>
+            <label>Firstname:</label>
+            <input type="text" id="fn"/><br>
+            <label>Lastname:</label>
+            <input type="text" id="ln"/><br>
+            <label>Age:</label>
+            <input type="text" id="age1"/><br>
+            <label>City:</label>
+            <input type="text" id="city1"/><br>
+            <button onclick="add()" id="ad">Add person</button>
+            <button onclick="update()" id="upp">Update</button>
+        <table border="1px">
+            <thead>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Age</th>
+                <th>City</th>
+                <th>Action</th>
+            </thead>
+            <tbody id="tbd">
+
+            </tbody>
+        </table>
+        <script>
+            var tablebody=document.getElementById('tbd');
+            var fname=document.getElementById("fn");
+            var lname=document.getElementById("ln");
+            var age=document.getElementById("age1");
+            var city=document.getElementById("city1");
+            var changeBtn=document.getElementById('upp');
+            var addBtn=document.getElementById('ad');
+            changeBtn.style.display='none'
+
+            var peoples=[];
+            var  editedValue;
+            function add(){
+                var obj1={
+                    firstname:fname.value,
+                    lastname:lname.value,
+                    age:age.value,
+                    city:city.value
+                }
+                peoples.push(obj1);
+                genTable(peoples)
+
+            }
+            function genTable(arr){
+                tablebody.innerHTML='';
+                arr.forEach(function(a,ind){
+                    var newtr=document.createElement('tr');
+                    var td1=document.createElement('td');
+                    td1.innerHTML=a.firstname;
+                    newtr.appendChild(td1);
+
+                    var td2=document.createElement('td');
+                    td2.innerHTML=a.lastname;
+                    newtr.appendChild(td2)
+
+                    var td3=document.createElement('td');
+                    td3.innerHTML=a.age;
+                    newtr.appendChild(td3)
+
+                    var td4=document.createElement('td');
+                    td4.innerHTML=a.city;
+                    newtr.appendChild(td4);
+
+                    var td5=document.createElement('td');
+                    var delbtn=document.createElement('button');
+                    delbtn.innerHTML='Delete';
+                    delbtn.onclick=function(){
+                       arr.splice(ind,1);
+                       genTable(arr)
+
+                    }
+                    td5.appendChild(delbtn);
+                    newtr.appendChild(td5)
+                    var editbtn=document.createElement('button');
+                    editbtn.innerHTML='Edit';
+                    editbtn.onclick=function(){
+                        fname.value=a.firstname;
+                        lname.value=a.lastname;
+                        age.value=a.age;
+                        city.value=a.city;
+                        editedValue=ind;
+                        addBtn.style.display='none';
+                       changeBtn.style.display='inline-block'
+                        
+                    }
+
+                    td5.appendChild(editbtn);
+
+
+                    tablebody.appendChild(newtr);
+
+
+
+                })
+
+            }
+            function update(){
+               var updatedValue=
+                {
+                    firstname:fname.value,
+                    lastname:lname.value,
+                    age:age.value,
+                    city:city.value
+
+                }
+                peoples[editedValue]=updatedValue;
+                addBtn.style.display='inline-block';
+                       changeBtn.style.display='none'
+
+               genTable(peoples)
+               
+
+            }
+            
+
+        </script>
+    </body>
+</html>

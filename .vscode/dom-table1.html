@@ -1,0 +1,50 @@
+<html>
+    <head></head>
+    <body>
+        <label>Name:</label><br>
+        <input type="text" id="name1"><br>
+        <label>Age:</label><br>
+        <input type="text" id="Age"><br><br>
+        <button onclick="addtask">Submit</button>
+        <table border="1px">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                </tr>
+            </thead>
+            <tbody id="addData">
+            
+            </tbody>
+        </table>
+        <script>
+            var fullName=document.getElementById("name1");
+            var myAge=document.getElementById("Age");
+            var td=document.getElementById("addData");
+            var ar=[];
+            function addtask(){
+                ar.innerHTML="";
+            var personDetails={
+                person:fullName.value,
+                personAge:myAge.value
+
+            }
+            ar.push(personDetails)
+            ar.forEach(function(add){
+                var newtr=document.createElement("tr");
+                var newtd1=document.createElement('td');
+                newtd1.innerHTML=add.fullName;
+                td.appendChild(newtd1);
+                var newtr=document.createElement("tr");
+                var newtd2=document.createElement('td');
+                newtd2.innerHTML=add.myAge;
+                td.appendChild(newtd2)
+
+            })
+          
+        }
+    
+
+        </script>
+    </body>
+</html>

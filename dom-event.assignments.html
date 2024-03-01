@@ -1,0 +1,837 @@
+<!-- <html>
+<head> -->
+<!-- <style>
+        .box{
+            height: 80px;
+            width:200px;
+            border:2px solid black;
+            border-radius: 2px;
+            background-color: "";
+        }
+    </style> -->
+<!-- <style>
+        *{
+            text-align: center;
+        }
+        .change{
+            color: red;
+        }
+        .orange{
+            background-color: orange;
+        }
+    </style> -->
+<!-- <style>
+        .box{
+            height:100px;
+            width:150px;
+            border:1px solid black;
+            background-color: red;
+        }
+    </style> -->
+<!-- </head>
+<body> -->
+<!-- <div>
+    <div class="box" id="d1">
+
+    </div><br>
+    <div>
+        <button onclick="red()">Red</button>
+        <button onclick="green()">Green</button>
+        <button onclick="blue()">Blue</button>
+        <button onclick="reset()">Reset</button>
+    </div> -->
+<!-- <button onclick="displayText()">Add Text</button> -->
+<!-- <h1 class="change">Change button background color on click</h1>
+    <button onclick="btnchange()" id="change1">white</button> -->
+<!-- <div class="box" id="change" onclick="btn()">
+
+    </div> -->
+<!-- <h1 class="change">Toggle button to show true/false</h1>
+    <button onclick="btn()" class="orange">Toggle</button>
+    <span id="d1" class="change"></span>
+</body>
+<script> -->
+<!-- // function displayText(){
+    //     var newh1=document.createElement('h1');
+    //     newh1.innerHTML="Welcome to a different world";
+    //     document.body.appendChild(newh1)
+    // }
+    // function red(){
+    //     var newtd=document.getElementById('d1')
+    //     newtd.style.backgroundColor="red"
+    // }
+    // function green(){
+    //     var newtd=document.getElementById('d1')
+    //     newtd.style.backgroundColor="green"
+    // }
+    // function blue(){
+    //     var newtd=document.getElementById('d1')
+    //     newtd.style.backgroundColor="blue"
+    // }
+    // function reset(){
+    //     var newtd=document.getElementById('d1')
+    //     newtd.style.backgroundColor="white"
+    // }
+    // function btnchange(){
+    //     var x=document.getElementById('change1');
+    //     if(x.innerHTML=="white"){
+    //         x.innerHTML="green";
+    //         x.style.backgroundColor="green";
+    //         x.style.color="white"
+    //     }
+    //     else{
+    //         x.innerHTML="white";
+    //         x.style.backgroundColor="white";
+    //         x.style.color="black"
+
+    //     }
+      
+    // }
+    // var colors=["green","yellow","orange","pink"];
+    // var i=0;
+    // function btn(){
+    //     var newCh=document.getElementById("change");
+    //     newCh.style.backgroundColor=colors[i]
+    //     i=i+1;
+    //     if(i>colors.length){
+    //         newCh.style.backgroundColor="red";
+    //         i=0;
+    //     }
+    // }
+    function btn(){
+        var x=document.getElementById('d1')
+        if(x.innerHTML=="true"){
+            x.innerHTML='false'
+        }
+        else
+        {
+            x.innerHTML="true"
+        }
+
+    }
+        -->
+<!-- </script>
+</html> -->
+<!-- <html>
+    <head></head>
+    <body>
+        <button onclick="btn()" id="change">On</button>
+        <script>
+            var newBtn=document.getElementById('change');
+            function btn(){
+                if(newBtn.innerHTML=="On"){
+                    newBtn.innerHTML="Off";
+                }
+                else{
+                    newBtn.innerHTML="On"
+                }
+            }
+
+        </script>
+    </body>
+</html> -->
+<!-- <html>
+    <head>
+        <style>
+            *{
+                margin: auto;
+            }
+            .change{
+                height:150px;
+                width:150px;
+                border:1px solid;
+            }
+            .change1{
+                display: flex;
+                justify-content: center;
+                margin-top: 10px;
+            }
+        </style>
+    </head>
+    <body >
+        <div class="change">
+            <h1 id="text">im Nothing</h1>
+        
+
+        </div>
+        <button class="change1" onclick="btn()">True/False</button>
+    </body>
+    <script>
+        var newOne=document.getElementById('text');
+        function btn(){
+            if(newOne.innerHTML==="im Nothing"){
+                newOne.innerHTML="True"
+            }
+            else{
+                if(newOne.innerHTML=="True"){
+                    newOne.innerHTML='False'
+                }
+                else{
+                    newOne.innerHTML='True'
+                }
+            }
+        }
+            
+
+    </script>
+</html> -->
+<!-- <html>
+    <head>
+        <style>
+            .change{
+            color: red;
+            text-align: center;
+        }
+        .btn{
+            margin-left:50%;
+            margin-bottom:20px;
+            margin-right: 20px;
+        }
+        .btn-green{
+            background-color: aquamarine;
+        }
+        .btn-red{
+            background-color: red;
+        }
+                
+        </style>
+    </head>
+    <body>
+        <div>
+        <h1 class="change">Like and Dislike button</h1>
+        <button class="btn btn-green" onclick="btn1()">Like</button><span id="click1" style="color: red;">0</span>
+        <button class="btn btn-red" onclick="btn2()">Dislike</button><span id="clicked1" style="color: red;">0</span>
+    </div>
+        <script>
+            var c=0
+            var d=0
+            function btn1(){
+                c++;
+                 var liked=document.getElementById('click1');
+                liked.innerHTML=c
+
+            }
+            function btn2(){
+                d++;
+                 var clicked=document.getElementById('clicked1');
+                clicked.innerHTML=d
+
+            }
+
+            
+        </script>
+
+    </body>
+</html> -->
+<!-- <html>
+    <head>
+        <style>
+        .box{
+            height:100px;
+            width:150px;
+            border:1px solid black;
+
+        }
+        .color-red{
+            color:red;
+        }
+    </style>
+    </head>
+    <body>
+        <div class="">
+        <h1 class="color-red">change background color using toggle button</h1>
+        <div class="box" id="change">
+
+        </div><br>
+        <button onclick="changeColor()">Toggle</button>
+    </div>
+    <script>
+        var newColor=document.getElementById('change');
+        newColor.style.backgroundColor="white"
+        function changeColor(){
+            if(newColor.style.backgroundColor=="white"){
+                newColor.style.backgroundColor="yellow"
+
+            }
+            else{
+                newColor.style.backgroundColor="white"
+            }
+        }
+
+        
+    </script>
+    </body>
+</html> -->
+<!-- <html>
+    <head>
+        <style>
+           .box{  
+            height:100px;
+            width:150px;
+            border:1px solid black;
+            margin-bottom: 20px;
+           }
+        </style>
+    </head>
+    <body>
+        <h1>Change background color of box using buttons</h1>
+        <div class="box" id="changeBg">
+            
+        </div>
+        <button onclick="changeOn()" id="changeColor1" style="background-color: orange;">On</button>
+        <button onclick="changeOff()" id="changeColor2" style="background-color: orange;">Off</button>
+        <script>
+            var changeColor=document.getElementById('changeBg');
+            function changeOn(){
+                changeColor.style.backgroundColor="yellow";
+                document.getElementById('changeColor1').style.backgroundColor="red";
+                document.getElementById('changeColor2').style.backgroundColor="white"
+                
+            }
+            function changeOff(){
+                changeColor.style.backgroundColor="white";
+                document.getElementById('changeColor2').style.backgroundColor="red";
+                document.getElementById('changeColor1').style.backgroundColor="white"
+
+            }
+
+        </script>
+    </body>
+</html> -->
+<!-- <html>
+    <head></head>
+    <body>
+        <h1>Show bulb on/off image using toggle button</h1>
+        <img id="changeImg" src="https://images.freeimages.com/images/large-previews/70a/light-bulb-1-1427502.jpg?fmt=webp&h=350"/>
+        <button onclick="Bulb()" id="d1">On</button>
+        <script>
+            var bulbOn=document.getElementById('d1');
+            var changeImage=document.getElementById('changeImg')
+
+            function Bulb(){
+                
+               if(bulbOn.innerHTML=="On"){
+                changeImage.src="https://images.freeimages.com/images/large-previews/07c/light-bulb-2-1427493.jpg?fmt=webp&h=350";
+              bulbOn.innerHTML='Off';
+            }
+              else{
+                changeImage.src="https://images.freeimages.com/images/large-previews/70a/light-bulb-1-1427502.jpg?fmt=webp&h=350";
+                bulbOn.innerHTML='On';
+              }
+
+               
+            }
+           
+        </script>
+    </body>
+</html> -->
+<!-- <html>
+    <head>
+        <style>
+            .imgsize{
+                margin-left:20%
+            }
+
+        </style>
+    </head>
+        <body>
+            <div>
+                <img id="img1" src="https://www.shutterstock.com/image-photo/frankfurtgermanyjune-24-air-india-boeing-260nw-669368440.jpg" onmouseover="abc()"/>
+                <img id="img2" src="https://static.vecteezy.com/system/resources/thumbnails/020/141/626/small/plane-in-the-sky-passenger-commercial-plane-flying-above-the-clouds-concept-of-fast-travel-vacation-and-business-photo.jpg" onmouseover="bca()"/>
+                <img id="img3" src="https://media.istockphoto.com/id/155380716/photo/commercial-jet-flying-over-clouds.jpg?s=612x612&w=0&k=20&c=idhnJ7ZdrLA1Dv5GO2R28A8WCx1SXCFVLu5_2cfdvXw=" onmouseover="cab()"/>
+            </div>
+            <img id="img" class="imgsize"
+
+            />
+            
+            <script>
+                var newImg=document.getElementById('img')
+                function abc(){
+                    newImg.src="https://www.shutterstock.com/image-photo/frankfurtgermanyjune-24-air-india-boeing-260nw-669368440.jpg";
+                }
+                function bca(){
+                    newImg.src="https://static.vecteezy.com/system/resources/thumbnails/020/141/626/small/plane-in-the-sky-passenger-commercial-plane-flying-above-the-clouds-concept-of-fast-travel-vacation-and-business-photo.jpg";
+                }
+                function cab(){
+                    newImg.src="https://media.istockphoto.com/id/155380716/photo/commercial-jet-flying-over-clouds.jpg?s=612x612&w=0&k=20&c=idhnJ7ZdrLA1Dv5GO2R28A8WCx1SXCFVLu5_2cfdvXw="
+                }
+
+                
+            </script>
+        </body>
+</html> -->
+<!-- <html>
+    <head>
+        <style>
+            .imgSize{
+                height:300px;
+                width:200px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="imgSize">
+            <span id="img1" onclick="abc()">&#9734</span>
+            <span id="img2" onclick="bca()">&#9734</span>
+            <span id="img3" onclick="cab()">&#9734</span>
+            <span id="img4" onclick="bab()">&#9734</span>
+            <span id="img5" onclick="cac()">&#9734</span>    
+        <h3>Rating:<span id="num"></span><span>/5</span></h3>
+    </div>
+
+        <script>
+            var newImg=document.getElementById('img1');
+            var newImg1=document.getElementById('img2');
+            var newImg2=document.getElementById('img3');
+            var newImg3=document.getElementById('img4');
+            var newImg4=document.getElementById('img5');
+
+            function abc(){
+                newImg.innerHTML="&#9733";
+                newImg1.innerHTML="&#9734";
+                newImg2.innerHTML="&#9734";
+                newImg3.innerHTML="&#9734";
+                newImg4.innerHTML="&#9734";
+                num.innerHTML="1";
+                
+
+            }
+            function bca(){
+                newImg.innerHTML="&#9733";
+                newImg1.innerHTML="&#9733";
+                newImg2.innerHTML="&#9734";
+                newImg3.innerHTML="&#9734";
+                newImg4.innerHTML="&#9734";
+                num.innerHTML="2";
+            }
+            function cab(){
+                newImg.innerHTML="&#9733";
+                newImg1.innerHTML="&#9733";
+                newImg2.innerHTML="&#9733";
+                newImg3.innerHTML="&#9734";
+                newImg4.innerHTML="&#9734";
+                num.innerHTML="3";
+            }
+            function bab(){
+                newImg.innerHTML="&#9733";
+                newImg1.innerHTML="&#9733";
+                newImg2.innerHTML="&#9733";
+                newImg3.innerHTML="&#9733";
+                newImg4.innerHTML="&#9734";
+                num.innerHTML="4";
+
+            }
+            function cac(){
+                newImg.innerHTML="&#9733";
+                newImg1.innerHTML="&#9733";
+                newImg2.innerHTML="&#9733";
+                newImg3.innerHTML="&#9733";
+                newImg4.innerHTML="&#9733";
+                num.innerHTML="5";
+            }
+
+        </script>
+    </body>
+</html> -->
+<!-- <html>
+    <head>
+        <style>
+        .newImg1{
+            height:150px;
+            width:200px
+        }
+    </style>
+    </head>
+        <body>
+            <h1>show images using URL</h1>
+            <span>Enter image URL:</span><input type="text" id="imgurl"><br><br>
+            <button onclick="addImg()">Add Image</button><br>
+            <span id="display">  </span>
+            <script>
+            var addItem=document.getElementById('imgurl');
+            var images=[]
+            function addImg(){
+                images.push(addItem.value);
+                var OneImage=document.getElementById('display');
+                OneImage.innerHTML="";
+                images.forEach(function(a){
+                    var dis1=document.createElement('img');
+                    OneImage.appendChild(dis1);
+                    dis1.src=a;
+                    addItem.value=""
+                    console.log(images)
+
+                })
+            }
+
+            </script>
+        </body>
+</html> -->
+<!-- <html>
+    <head></head>
+    <body>
+        <div style="margin-left: 50%;">
+        <h1 style="color: red;">Add Students</h1>
+        <input type="text" id="addOne">
+        <button onclick="add()">Add Student</button>
+        <ul id="data">
+
+        </ul>
+    </div>
+        <script>
+            var addStd=document.getElementById('addOne');
+            var newul=document.getElementById('data')
+            var students=[];
+            
+            function add(){
+                students.push(addStd.value);
+                newul.innerHTML="";
+               students.forEach(function(student){
+                var newli=document.createElement('li');
+                newul.appendChild(newli);
+                newli.innerHTML=student
+                
+               })
+
+            }
+            
+
+        </script>
+    </body>
+</html> -->
+<!-- <html>
+
+
+<head>
+    <style>
+        .img1 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="img1">
+        <img src="" id="image" onclick="imageChange()" />
+    </div>
+    <script>
+        var newImg = document.getElementById('image');
+        var arr = ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRivnHMnx2M8SGaORSta1cAwkIbU4RUSdbe9m5Muup5XQ&s", "https://wallpapers.com/images/featured/flower-pictures-unpxbv1q9kxyqr1d.jpg"
+            , "https://hips.hearstapps.com/hmg-prod/images/close-up-of-tulips-blooming-in-field-royalty-free-image-1584131603.jpg?crop=0.630xw:1.00xh;0.186xw,0&resize=1200:*"]
+        var i = 0;
+        newImg.src = arr[i]
+        i = i + 1;
+        function imageChange() {
+            newImg.src = arr[i];
+            i = i + 1;
+            if (i >= arr.length) {
+                i = 0;
+            }
+        }
+        console.log(arr.length)
+    </script>
+</body>
+
+</html> -->
+<!-- <html>
+
+<head></head>
+
+<body>
+    <div class="">
+    <h1 style="color:red;">Image Carousel</h1>
+        <img id="newImg" src="" /><br>
+        <button style="margin-right: 20%;" onclick="prev()">Prev</button>
+        <button onclick="incre()">Next</button>
+    </div>
+    <script>
+        var arr = ["https://imgd.aeplcdn.com/370x208/n/cw/ec/124013/hunter-350-right-front-three-quarter.jpeg?isig=0&q=80",
+            "https://images.carandbike.com/bike-images/big/ktm/rc-200/ktm-rc-200.jpg?v=26",
+            "https://bd.gaadicdn.com/processedimages/indian/scout-bobber/source/scout-bobber62eb4a0d92990.jpg?tr=w-375"]
+        var newImg1 = document.getElementById('newImg');
+        var i = 0;
+        newImg1.src = arr[i];
+        function incre() {
+            if(i==arr.length-1){
+                i=0;
+                newImg1.src=arr[i];
+
+            }
+            else{
+                i++;
+                newImg1.src=arr[i]
+            }
+        }
+        function prev(){
+            if(i==0){
+                i=arr.length-1;
+                newImg1.src=arr[i]
+            }
+            else{
+                i--;
+                newImg1.src=arr[i]
+            }
+
+        }
+
+    </script>
+</body>
+
+</html> -->
+
+<!-- <html>
+    <head>
+        <style>
+            .box{
+                height:200px;
+                width:250px;
+                border:1px solid black
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="box" id="d1">
+
+        </div>
+        <button onclick="red()">Red</button>
+        <button onclick="blue()">Blue</button>
+        <button onclick="green()">Green</button>
+        <button onclick="reset()">Reset</button>
+        <script>
+            function red(){
+                document.getElementById('d1').style.backgroundColor='red';
+
+            }
+            function blue(){
+                document.getElementById('d1').style.backgroundColor='blue';
+
+            }
+            function green(){
+                document.getElementById('d1').style.backgroundColor='green';
+
+            }
+            function reset(){
+                document.getElementById('d1').style.backgroundColor='white';
+
+            }
+        </script>
+    </body>
+</html> -->
+<!-- <html>
+    <head>
+        <style>
+            .box{
+                height:500px;
+                width:250px;
+                border:2px solid orange;
+                background-color: yellow;
+            }
+            img{
+                border-radius: 50%;
+            }
+            #box1{
+                display: flex;
+
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Add Contact Cards</h1>
+        <div>
+            <label>Name:</label><input type="text" id="name"><br><br>
+            <label>Number:</label><input type="text" id="num"><br><br>
+            <label>Email:</label><input type="text" id="email"><br><br>
+            <label>Enter Image URL:</label><input type="text" id="image"><br><br>
+            <button onclick="add()">Add Contact</button>
+        </div>
+        <div  id="box1">
+        
+
+        </div>
+        <script>
+            var newBox=document.getElementById('box1')
+            var arr=[]
+            function add(){
+                // var newName=document.getElementById('name').value;
+                // var newNum=document.getElementById('num').value;
+                // var newEmail=document.getElementById('email').value;
+                // var newImg=document.getElementById('image').value;
+                // console.log(newName);
+                // console.log(newNum);
+                // console.log(newEmail);
+                // console.log(newImg);
+                var obj1={
+                    name:document.getElementById('name').value,
+                    number:document.getElementById('num').value,
+                    email:document.getElementById('email').value,
+                    image:document.getElementById('image').value
+                }
+                arr.push(obj1)
+                console.log(arr)
+                newBox.innerHTML="";
+               arr.forEach(function(a){
+                var newDiv=document.createElement('div');
+                   var newimg=document.createElement('img');
+                   newimg.src=a.image;
+                   newDiv.appendChild(newimg)
+
+                   var newh1=document.createElement('h1');
+                   newh1.innerHTML="Name:"+a.name;
+                   newDiv.appendChild(newh1)
+
+                   var newh2=document.createElement('h2');
+                   newh2.innerHTML="Number:"+a.number;
+                   newDiv.appendChild(newh2)
+
+                   var newh3=document.createElement('h2');
+                   newh3.innerHTML="Email:"+a.email;
+                   newDiv.appendChild(newh3);
+                   newBox.appendChild(newDiv)
+
+
+                //    newBox.style.backgroundColor="yellow";
+                //    newBox.style.border="2px solid orange";
+                //    newBox.style.height='500px';
+                //    newBox.style.width='250px';
+                newDiv.className="box"
+                
+               })
+
+
+            }
+
+        </script>
+    </body>
+</html> -->
+<!-- <html>
+    <head></head>
+    <body>
+        <
+    </body>
+</html> -->
+<!-- <html>
+    <head>
+        <style>
+            .orange{
+                color: red;
+                
+            }
+            .newBox{
+                height:400px;
+                width:600px;
+                background-color: yellow;
+                border:2px solid red;
+                text-align: center;
+                margin-bottom: 10px;
+
+            }
+            .btn1{
+                background-color: rgb(0, 162, 255);
+                color: white;
+            }
+            .imgStyle{
+                border-radius: 50%;
+                height:50%;
+                width:50%
+            }
+        </style>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    </head>
+    <body>
+        <div>
+        <h1 class="orange">Add Contact Cards with CRUD operations</h1>
+        <label class="orange">Name:</label><input type="text" id="nam"><br><br>
+        <label class="orange">Number:</label><input type="text" id="number"><br><br>
+        <label class="orange">Email:</label><input type="text" id="mail"><br><br>
+        <label class="orange">Image URL:</label><input type="text" id="Image"><br><br>
+        <button onclick="add()" class="btn1" id="newBtn">Add Contact</button><br><br>
+    </div>
+    <div id="cards">
+
+    </div>
+        <script>
+            var newCards=document.getElementById('cards')
+            var data=[];
+            var saveBtn=document.getElementById('newBtn')
+
+
+            function add(){
+                var name=document.getElementById('nam');
+                var nmr=document.getElementById('number');
+                var email=document.getElementById('mail');
+                var image=document.getElementById('Image');
+                var obj={
+                    name:name.value,
+                    number:nmr.value,
+                    email:email.value,
+                    image:image.value
+                }
+                data.push(obj)
+                console.log(data)
+                genDiv(data)
+
+            }
+            function genDiv(data,index){
+                newCards.innerHTML="";
+
+            data.forEach(function(a){
+                var newdiv=document.createElement('div');
+                newdiv.className="newBox";
+                var newh4=document.createElement('img');
+                newh4.src=a.image;
+                newh4.className="imgStyle"
+                newdiv.appendChild(newh4);
+
+                var newh1=document.createElement('h3');
+                newh1.innerHTML="Name:"+a.name;
+                newdiv.appendChild(newh1)
+
+                var newh2=document.createElement('h3');
+                newh2.innerHTML="Number:"+a.number;
+                newdiv.appendChild(newh2)
+
+                var newh3=document.createElement('h3');
+                newh3.innerHTML="email:"+a.email;
+                newdiv.appendChild(newh3)
+
+                var newBtn=document.createElement('button');
+                newBtn.innerHTML="Edit";
+                newBtn.className="btn1"
+                newBtn.onclick=function(){
+                    name.value=a.name;
+                    number.value=a.number;
+                    email.value=a.email;
+                    image.value=a.image;
+                    saveBtn.innerHTML="Save Contact";
+                    
+                }
+                newdiv.appendChild(newBtn)
+
+            
+                newCards.appendChild(newdiv)
+            })
+        }
+
+        </script>
+    </body>
+</html> -->
+<html>
+    <head>
+        <body id="d1">
+            <!-- <input type="text" disabled id="text"><br>
+            <button  onclick="add()" >Enable the text box</button>
+            <script>
+                var newText=document.getElementById('text')
+
+                function add(){
+                    newText.disabled=false
+                } -->
+
+                
+                
+
+            </script>
+        </body>
+    </head>
+</html>

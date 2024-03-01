@@ -1,0 +1,33 @@
+<script>
+// var ar=[1,5,6,7,9,2];
+// ar.forEach(function(a,v){console.log("sum",a,v)})
+// function div(a,b,cf){
+//        var z;
+//        z=a/b;
+//        cf(z);
+
+// }
+// div(10,3,function(x){console.log(x)});
+// var ar=[1,67,39,29,34];
+// ar.forEach(function(value,index,array){
+//     console.log(index);
+// })
+//forEach takes callback function as an argument and calls the callback function based on the number of
+//array elements.Here first argument is a array element and second argument is index.
+var ar=[12,34,64,86,13];
+// ar.forEach(function(a,i){
+//     alert(a,i)
+// })
+//map is a array iterative method map will iterate the all the elements in the array and map will takes the call back function and map will not change the existing array and map  return a new array
+// var k=ar.map(function(a,i){
+//     console.log(a,i)
+//     return i*100
+// })
+// console.log(k)
+var k=ar.map(function(a,i){
+    return a*10
+})
+console.log(k)
+console.log(ar)
+
+</script>

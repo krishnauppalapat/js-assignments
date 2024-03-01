@@ -1,0 +1,164 @@
+<!-- Write a program to print the sum of 1 to 10 ( initialisation of sum variable with 0 )
+var sum=(a,b)=>{
+    return a+b; 
+} -->
+<!-- // var x=new Date('may 21 2023');
+// console.log(x)
+// var d=new Date();
+// d.toString();
+// console.log(d)
+// d.setMonth(2);
+// d.toString();
+// console.log(d)
+// date/month/year
+// var a=new Date();
+// var date=a.getDate();
+// var month=a.getMonth()+1;
+// var year=a.getFullYear();
+// console.log(date+'/'+month+'/'+year)
+// Create a digital clock that shows hours, minutes, seconds and milliseconds -->
+<!-- <html>
+
+<head></head>
+
+<body>
+    <h1 id="d1"></h1>
+    <button onclick="start()" id="d2">start</button>
+    <script>
+        var btn = document.getElementById('d2');
+        var x = setInterval(() => {
+            var d = new Date();
+            var clocktime = document.getElementById('d1');
+            clocktime.innerHTML = (d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds() + ":" + d.getMilliseconds());
+
+        }, 1000);
+
+
+        function start() {
+            if (btn.innerHTML == "start") {
+                btn.innerHTML = "stop";
+                clearInterval(x)
+            }
+
+            else {
+                var x = setInterval(() => {
+                    var d = new Date();
+                    var clocktime = document.getElementById('d1');
+                    clocktime.innerHTML = (d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds() + ":" + d.getMilliseconds());
+
+                }, 1000);
+                btn.innerHTML = 'start'
+
+
+            }
+        } -->
+
+
+
+    <!-- </script> -->
+
+    <!-- Write a program to take the DOB of a person as input and print the current age of the person in the console. -->
+
+    <!-- <html>
+    <head></head>
+    <body>
+        <input type="date" id="d1">
+        <h3>Age:<span id="d2"></span></h3>
+</body>
+<script>
+    var dob=document.getElementById('d1');
+    var age=document.getElementById('d2');
+    dob.innerHTML=e.target.value
+    var dob=new Date();
+    var oldDob=dob.getTime();
+    var present=new Date();
+    var newDate=present.getTime();
+    var newage=newDate-oldDob;
+    age.innerHTML=newage
+
+    
+    
+</script>
+</html> -->
+<!-- <html>
+    <head></head>
+    <body>
+        <h1>Stop Watch</h1>
+        <h3 id="d1"></h3>
+        <button id="d2" onclick="start()">Stop</button>
+        <h3>Time stopped:<span id="d3"></span></h3>
+        <script>
+            var btn=document.getElementById('d2');
+            var stTime=document.getElementById('d3');
+            var i=0;
+            var y;
+
+            var x= setInterval(()=>{
+                var time=document.getElementById('d1');
+                var d=new Date();
+                time.innerHTML=(d.getHours()+":"+d.getMinutes()+":"+d.getSeconds());
+
+            },100)
+        
+            function start(){
+            if(btn.innerHTML=="Stop"){
+
+                clearInterval(x);
+                btn.innerHTML="Start";
+                stTime.innerHTML=i;
+               y=  setInterval(()=>{
+                    stTime.innerHTML=i++
+                },1000)
+
+            }
+            else{
+                 x= setInterval(()=>{
+               var time=document.getElementById('d1');
+                var d=new Date();
+                time.innerHTML=(d.getHours()+":"+d.getMinutes()+":"+d.getSeconds());
+
+            },100)
+                 clearInterval(y)
+            btn.innerHTML="Stop";
+            i=0;
+
+            }
+        }
+        var newInp=document.getElementById('d1');
+            var newAge=document.getElementById('d2');
+            var age;
+        function gen(e){
+            var date=new Date();
+            var oldDate=new Date(e.target.value)
+            var age=(date.getTime()-oldDate.getTime())/(1000*60*60*24*365)
+            console.log(date.getTime())
+            console.log(oldDate.getTime())
+            newAge.innerHTML=age
+            }
+
+
+        </script>
+    </body>
+</html> -->
+<!-- <html>
+    <head></head>
+    <body>
+        <script>
+        // <!-- <input type="date" id="'d1" onchange="gen(event)">
+        // <h3>Age:<span id="d2"></span></h3>
+        // <script>
+        //     var newAge=document.getElementById('d2');
+        //     function gen(e){
+        //      var oldDate=new Date(e.target.value);
+        //      var presentDate=new Date();
+        //      var age=(presentDate.getTime()-oldDate.getTime())/(1000*60*60*24*365);
+        //      newAge.innerHTML=age
+
+        //     } --
+        </script>
+    </body>
+</html> -->
+<script>
+    const ar=[10,20,30,40];
+       ar=['sai','edupoly']
+</script>

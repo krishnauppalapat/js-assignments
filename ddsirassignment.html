@@ -1,0 +1,26 @@
+<html>
+    <head>
+    </head>
+    <body>
+           <label>User Name:</label>
+           <input type="text" id="name">
+           <button onclick="add()">Add</button>
+           <ul id="addName">
+
+           </ul>
+           <script>
+            var data=document.getElementById("name");
+            var addData=document.getElementById("addName");
+            var tasks=[];
+            function add(){
+                addData.innerHTML=" ";
+                tasks.push(data.value);
+                tasks.forEach(function(task){
+                    var newli=document.createElement("li");
+                    newli.innerHTML=task;
+                    addData.appendChild(newli)
+                });
+            }
+           </script>
+     </body>
+</html>

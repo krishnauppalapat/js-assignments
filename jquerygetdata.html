@@ -1,0 +1,41 @@
+<html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <table id="d1"border='1px solid black'>
+    </table>
+    <script>
+      $.get("https://fakestoreapi.com/products").then((a)=>{
+        var b=Object.keys(a[0])
+        var tr=document.createElement('tr');
+        a.forEach((key)=>{
+            var th1=document.createElement('th');
+            th1.innerHTML=key;
+          tr.appendChild(th1);
+        })
+        document.getElementById('d1').appendChild(tr)
+
+       a.forEach((product)=>{
+        for(var k in product){
+            var tr=document.createElement('tr');
+            var th1=document.createElement('td');
+            th1.innerHTML=k;
+            console.log(k)
+            th1.appendChild(tr);
+
+        }
+        document.getElementById('d1').appendChild(tr)
+
+
+       })
+
+      })
+
+    </script>
+</body>
+
+</html>

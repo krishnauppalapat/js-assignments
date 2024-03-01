@@ -1,0 +1,17 @@
+<html>
+    <head></head>
+    <body>
+        <input type="date" onchange="checkage(event)" id="d1"/>
+        <h3>age:<span id="d2"></span></h3>
+        <script>
+            var dis=document.getElementById('d2')
+            function checkage(e){
+                var dob=new Date(e.target.value);
+                console.log(dob)
+                var present=new Date();
+                var age=(present-dob)/(1000*60*60*24*365);
+                dis.innerHTML=age;
+            }
+        </script>
+    </body>
+</html>

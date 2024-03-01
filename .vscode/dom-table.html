@@ -1,0 +1,50 @@
+<html>
+    <head></head>
+    <body>
+        <label>Person</label>
+        <input type="text" id="p"><br><br>
+        <label>Age</label>
+        <input type="text" id="a"><br><br>
+        <button onclick="add()">Add Person</button>
+        <table border="1px">
+            <thead>
+                <tr>
+                    <th>Person</th>
+                    <th>Age</th>
+                </tr>
+            </thead>
+            <tbody id="tb">
+                
+            </tbody>
+        </table>
+        <script>
+            var pName=document.getElementById("p");
+            var pAge=document.getElementById("a");
+            var table=document.getElementById("tb");
+            var people=[]
+             function add(){
+                table.innerHTML='';
+                var personObj={
+                    personName:pName.value,
+                    personAge:pAge.value
+
+                }
+                people.push(personObj);
+                 genTable(people);
+
+             }
+             function genTable(arr){
+                arr.forEach(function(person){
+                    var trow=document.createElement('tr');
+                    var td1=document.createElement('td');
+                    var td2=document.createElement('td');
+                     td1.innerHTML=person.personName;
+                     td2.innerHTML=person.personAge;
+                     trow.appendChild(td1);
+                     trow.appendChild(td2);
+                     table.appendChild(trow)
+                })
+             }
+        </script>
+    </body>
+</html>

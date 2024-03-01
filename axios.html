@@ -1,0 +1,107 @@
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    </head>
+    <body>
+        <button onclick="sortAsc()">A-Z</button>
+        <button onclick="sortDes()">Z-A</button>
+        <input type="text" placeholder="search" onkeyup="search()" id="searchBox">
+        <table border="2px">
+            <thead>
+                <tr>
+                    <th>sno</th>
+                    <th>Name</th>
+                    <th>Capital</th>
+                    <th>Region</th>
+                    <th>SubRegion</th>
+                    <th>Flag</th>
+
+                </tr>
+            </thead>
+            <tbody id="tbd">
+
+            </tbody>
+        </table>
+
+        <script>
+            function sortAsc(){
+                countries.sort(function(a,b){
+                    var fn1=a.name.common.toLowerCase();
+                    var fn2=b.name.common.toLowerCase();
+                    if(fn1>fn2){
+                        return 1
+                     } else{
+                        return -1
+                        }
+                })
+                createTable(countries);
+              
+            }
+            function sortDes(){
+                countries.sort(function(a,b){
+                    var fn1=a.name.common.toLowerCase();
+                    var fn2=b.name.common.toLowerCase();
+                    if(fn1<fn2){
+                        return 1
+                     } else{
+                        return -1
+                        }
+                })
+                createTable(countries);
+              
+            }
+            function search(){
+                var filteredCountries=countries.filter(function(country){
+                    return(country.name.common.toLowerCase().startsWith(searchBox.value.toLowerCase()))
+
+                })
+                createTable(filteredCountries)
+            }
+                
+            var countries=[];
+            axios.get("https://restcountries.com/v3.1/all").then(function(res){
+                countries=res.data
+                // console.log(countries)
+                console.log(countries[1])
+                createTable(countries)
+            })
+            var tb=document.getElementById('tbd');
+            function createTable(arr){
+                tbd.innerHTML="";
+                var i=1;
+                arr.forEach(function(a){
+                    newtr=document.createElement("tr");
+                    newtd6=document.createElement('td');
+                    newtd6.innerHTML=i;
+                    i=i+1;
+                    newtr.appendChild(newtd6)
+
+
+                    newtd1=document.createElement('td');
+                    newtd1.innerHTML=a.name.common;
+                    newtr.appendChild(newtd1)
+
+                    newtd2=document.createElement('td');
+                    newtd2.innerHTML=a.capital;
+                    newtr.appendChild(newtd2)
+
+                    newtd3=document.createElement('td');
+                    newtd3.innerHTML=a.region;
+                    newtr.appendChild(newtd3)
+
+                    newtd4=document.createElement('td');
+                    newtd4.innerHTML=a.subregion;
+                    newtr.appendChild(newtd4)
+
+                    newtd5=document.createElement('td');
+                    newImg=document.createElement('img')
+                    newImg.src=a.flags.png;
+                    newtd5.appendChild(newImg)
+                    newtr.appendChild(newtd5)
+                    tb.appendChild(newtr)
+                })
+
+            }
+        </script>
+    </body>
+</html>

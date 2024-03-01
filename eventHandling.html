@@ -1,0 +1,382 @@
+<html>
+
+<head>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+
+<body>
+    <div id="d1"></div>
+    <script type="text/babel">
+        var dd = document.getElementById('d1')
+        // function abc(e){
+        //    console.log(alert('hello edupoly'));
+
+        // }
+        // var btnclick=<button onClick={(event)=>{abc(event)}}>Click here to see alert</button>
+        //    function abc(e){
+        //     console.log("hi sai")
+        //    }
+        //     var btnclick=<button onClick={(event)=>{abc(event)}}>Click here to see alert</button>
+        //    function abc(e){
+        //     console.log(e.clientX);
+        //     console.log(e.clientY)
+
+        //    }
+        // var btnclick=<div style={{width:'300px',height:'200px',border:'2px solid'}}>
+        //     <p onClick={(event)=>{abc(event)}}>Click here </p>
+        //     </div>
+        // function abc(e){
+        //     console.log(e.target.id)
+        // }
+        // var btnclick=<div style={{width:'300px',height:'200px',border:'2px solid'}}>
+        //     <p onClick={(event)=>{abc(event)}} id="d3">Welcome to Edupoly React js</p>
+        //     </div>
+        //     ReactDOM.render(btnclick,dd)
+        // function abc(e){
+        //     console.log(e.target.innerHTML)
+
+        // }
+
+        // var btnclick=<div style={{width:'300px',height:'200px',border:'2px solid'}}>
+        //     <h1 onClick={(event)=>{abc(event)}}>Welcome to Edupoly ReactJS</h1>
+        //     </div>
+        //     ReactDOM.render(btnclick,dd)
+        // function abc(){
+        //     console.log(document.getElementById('d5').value)
+
+
+        // }
+        // var btnclick=<div>
+        //     <input type='text' id='d5'/>
+        //     <button onClick={()=>{abc()}}>Click here to see alert</button></div>
+
+        //  function abc(){
+        //    document.getElementById('d8').innerHTML=document.getElementById('d5').value.toUpperCase();
+        //  }
+        // var btnclick=<div>
+        //     <input type='text' id='d5'/>
+        //     <button onClick={()=>{abc()}}>Click here to see alert</button>
+        //     <h1 id='d8'></h1>
+        //     </div>
+        // function abc(e){
+        //     document.getElementById('d3').innerHTML=document.getElementById('d9').value.toUpperCase();
+
+        // }
+        // var btnclick=<div>
+        //     <input type='text' onKeyUp={(event)=>{abc(event)}} id='d9'/>
+        //     <h1 id='d3'></h1>
+        //     </div>
+        // function abc(e){
+        //     document.getElementById('d3').innerHTML=document.getElementById('d9').value.toUpperCase()
+
+        // }
+        // var btnclick=<div>
+        //     <input type='text'onBlur={(event)=>{abc(event)}} id='d9'/>
+        //     <h1 id='d3'></h1>
+        //     </div>
+        //     ReactDOM.render(btnclick,dd)
+        // function abc(e){
+        //     document.getElementById('d10').innerHTML=document.getElementById('d9').value;
+
+
+        // }
+        // function clearText(){
+        //     document.getElementById('d9').value="";
+        //     document.getElementById('d10').innerHTML=""
+
+        // }
+        // var btnclick=<div>
+        //     <input type='text' id='d9' onKeyUp={(event)=>{abc(event)}}/>
+        //     <h1 id='d10'></h1>
+        //     <button onClick={()=>{clearText()}}>Clear text</button>
+        //     </div>
+        // function abc(){
+        //     var a=+(document.getElementById('d3').value);
+        //     var b=+(document.getElementById('d4').value);
+        //     document.getElementById('d5').innerHTML=a-b;
+        //  }
+        // var btnclick=<div>
+        //     <input type='number' id='d3'/><br/>
+        //     <input type='number' id='d4'/><br/>
+        //     <button onClick={()=>{abc()}}>Add</button>
+        //     <h1 id='d5'></h1>
+        //     </div>
+        // function abc(){
+        //     var a=+(document.getElementById('d3').value);
+        //     var b=+(document.getElementById('d4').value);
+        //     document.getElementById('d5').innerHTML=a*b;
+        //     document.getElementById('d6').innerHTML=''
+        // }
+        // function bca(){
+        //     var a=+(document.getElementById('d3').value);
+        //     var b=+(document.getElementById('d4').value);
+        //     document.getElementById('d6').innerHTML=a/b;
+        //     document.getElementById('d5').innerHTML=''
+
+        // }
+
+        // var btnclick=<div>
+        //     <input type='text' id='d3'/><br/>
+        //     <input type='text' id='d4' /><br/>
+        //     <button onClick={()=>{abc()}}>Mul</button>
+        //     <button onClick={()=>{bca()}}>Div</button>
+        //     <h1 id='d5'></h1>
+        //     <h1 id='d6'></h1>
+        //     </div>
+        //     ReactDOM.render(btnclick,dd)
+        // function abc(e){
+        //     document.getElementById('d7').innerHTML=e.target.value
+        // }
+        // var btnclick=<div>
+        //     <input type="radio" name='country' value="india" id="d2" onChange={(event)=>{abc(event)}} />India
+        //     <input type="radio" name='country' value="Usa" id='d3' onChange={(event)=>{abc(event)}} />USA
+        //     <h1 id="d7"> </h1>
+        //  var male="https://cdn1.iconfinder.com/data/icons/user-pictures/101/malecostume-512.png";
+        // var female='https://cdn1.iconfinder.com/data/icons/user-pictures/101/malecostume-512.png';
+        // fu   </div>
+        // nction abc(e) {
+        //     document.getElementById('d2').value=="male"?(document.getElementById('d2')):()
+        //     document.getElementById('d5').src =
+        //     document.getElementById('d5')
+        // }
+        // var btnclick = <div>
+        //     <input type='radio' name='country' value='male' id='d2' checked= onChange={(event) => { abc(event) }} />
+        //     <input type='radio' name='country' value='female' id='d2' onChange={(event) => { abc(event) }} />
+        //     <img src="" id='d5'/>
+        // </div>
+        // function abc(e){
+        //     document.getElementById('d3').innerHTML=e.target.value;
+
+        // }
+        // var btnclick=<div>
+        //     <select name='countries' onChange={(event)=>{abc(event)}}>
+        //     <option value='India' id="ind">India</option>
+        //     <option  value='USA' id="usa" >USA</option>
+        //     <option value="Sri lanka" id="sri">Sri lanka</option>
+        //     </select>
+        //     <h1 id='d3'></h1>
+        //     </div>
+        // var techs=[];
+        // function handleTechs(e){
+        //     const tech=e.target.value;
+        //     if(e.target.checked){
+        //         techs.push(tech)
+        //     }
+        //     else{
+        //         const index=techs.indexOf(tech);
+        //         if(index!==-1){
+        //             techs.splice(index,1);
+        //         }
+        //     }
+        //     document.getElementById('d3').innerHTML=techs.join(',')
+
+        // };
+        // var btnclick=<div>
+        //     <input type='checkbox' onChange={(event)=>{handleTechs(event)}} value="React JS"/>React js
+        //     <input type='checkbox' onChange={(event)=>{handleTechs(event)}} value="Angular"/>Angular
+        //     <input type='checkbox' onChange={(event)=>{handleTechs(event)}} value="HTML"/>HTML
+        //     <h1 id="d3"></h1>
+        //     </div>
+        // ReactDOM.render(btnclick, dd)
+        // function dateChange(e){
+        //     document.getElementById('d3').innerHTML=e.target.value
+
+        // }
+        // var btnclick=<div>
+        //        <input type="date" value='date' id='d1' onChange={(event)=>{dateChange(event)}}/>
+        //          <h1 id="d3"></h1>
+        //     </div>
+        //  ReactDOM.render(btnclick, dd)
+        // function abc(x){
+        //     document.getElementById('d3').innerHTML=x
+
+        // }
+        // var btnclick=<div>
+        //     <button onClick={()=>{abc(11)}}>Button 1</button>
+        //     <button onClick={()=>{abc(12)}}>Button 2</button>
+        //     <button onClick={()=>{abc(13)}}>Button 3</button>
+        //     <button onClick={()=>{abc(14)}}>Button 4</button>
+        //     <h1 id="d3"></h1>
+        //      </div>
+        //  ReactDOM.render(btnclick, dd)
+        // function abc(i){
+        //     alert(i)
+        // }
+        // var li=['sai','srikanth','sairam','vinni'];
+        // var btnclick=<div>
+        //     {
+        //         li.map((a,i)=>{
+        //            return <li onClick={()=>{abc(i)}}>{a}</li>
+        //         })
+        //     }
+        //     </div>
+        //  ReactDOM.render(btnclick, dd)
+
+        // function abc(a){
+        //     alert(a)
+        // }
+        // var li=['sai','srikanth','sairam','vinni'];
+        // var btnclick=<div>
+        //     {
+        //         li.map((a,i)=>{
+        //            return <li onClick={()=>{abc(a)}}>{a}</li>
+        //         })
+        //     }
+        //     </div>
+        //  ReactDOM.render(btnclick, dd)
+        // function abc(a){
+        //     alert(a)
+        // }
+        // var li=['sai','srikanth','sairam','vinni'];
+        // var btnclick=<div>
+        //     {
+        //         li.map((a,i)=>{
+        //            return (<li onClick={()=>{abc(a)}}>{a}</li>
+        //            )
+        //         })
+        //     }
+            
+        //     </div>
+        //  ReactDOM.render(btnclick, dd)
+        // function abc(a){
+        //     alert(a)
+        // }
+        // var students=[
+        //     {
+        //         firstName:'sai',
+        //         lastName:'uppalapati',
+        //         age:24,
+        //         gender:'male'
+        //     },
+        //     {
+        //         firstName:'srikanth',
+        //         lastName:'btech',
+        //         age:22,
+        //         gender:'male'
+        //     },
+        //     {
+        //         firstName:'vinitha',
+        //         lastName:'surireddy',
+        //         age:24,
+        //         gender:'female'
+        //     },
+        //     {
+        //         firstName:'anu',
+        //         lastName:'chow',
+        //         age:21,
+        //         gender:'female'
+        //     }
+
+            
+        // ];
+    //   function abc(a,i){
+    //     document.getElementById('d3').innerHTML=a.lastName+" is "+"at "+"index "+i
+
+    //   }
+
+
+    //     var btnclick=<div>
+    //         {
+    //             students.map((a,i)=>{
+    //                return (<li>{a.firstName}
+    //                 <button onClick={()=>{abc(a,i)}}>See</button></li>
+                   
+    //                )
+    //             })
+    //         }
+    //         <h1 id='d3'></h1>
+            
+    //         </div>
+    //      ReactDOM.render(btnclick, dd)
+    // function abc(a,i){
+    //     document.getElementById('d3').innerHTML=a.firstName;
+    //     document.getElementById('d4').innerHTML=i;
+    //     document.getElementById('d5').innerHTML=a.lastName;
+    //     document.getElementById('d6').innerHTML=a.age;
+    //     document.getElementById('d6').innerHTML=a.gender;
+    //   }
+
+
+    //     var btnclick=<div>
+    //         {
+    //             students.map((a,i)=>{
+    //                return (<li onClick={()=>{abc(a,i)}}>{a.firstName}</li>
+                   
+    //                )
+    //             })
+    //         }
+    //         <h1 id='d3'></h1>
+    //         <h1 id='d4'></h1>
+    //         <h1 id='d5'></h1>
+    //         <h1 id='d6'></h1>
+            
+    //         </div>
+    //      ReactDOM.render(btnclick, dd)
+    // var newValue=120;
+    // function abc(){
+    //     document.getElementById('d2').innerHTML=newValue+1;
+    //     newValue++;
+
+    // }
+    // function bca(){
+    //     document.getElementById('d2').innerHTML=newValue-1;
+    //     newValue--;
+
+    // }
+    // function reset(){
+    //     document.getElementById('d2').innerHTML=120;
+    // }
+    // var btnclick=<div>
+    //     <h1 id='d2'>{newValue}</h1>
+    //     <button onClick={()=>{abc()}}>Increment</button>
+    //     <button onClick={()=>{bca()}}>Decrement</button>
+    //     <button onClick={()=>{reset()}}>Reset</button>
+    //     </div>
+    // var techs=[];
+    // function abc(){
+    //     var newtd=document.getElementById('d2').value;
+    //     techs.push(newtd);
+    //     console.log(techs)
+    // }
+    // var btnclick=<div>
+    //     <input type="text" id='d2'/>
+    //     <button onClick={()=>{abc()}}>Click here push value</button>
+    //     </div>
+    // var techs=[];
+    // function abc(){
+    //     var newtd=document.getElementById('d2').value;
+    //     techs.push(newtd);
+    //     document.getElementById('d3').innerHTML=techs;
+
+
+    // }
+    // var btnclick=<div>
+    //     <input type="text" id='d2'/>
+    //     <button onClick={()=>{abc()}}>Click here push value</button>
+    //     <ul>
+    //        {
+    //         techs.map((a)=>{
+    //             <li id='d3'>{a}</li>
+    //         })
+    //        }
+    //         </ul>
+    //     </div>
+//   setInterval(()=>{
+//         var dated=new Date();
+//      var newtime=dated.getHours()+":"+dated.getMinutes()+":"+dated.getSeconds();
+//      document.getElementById('d3').innerHTML=newtime;
+
+//     },100)
+    
+// var btnclick=<div>
+//     <h1 id="d3"></h1>
+//     </div>
+    
+
+        ReactDOM.render(btnclick, dd)
+    </script>
+</body>
+
+</html>

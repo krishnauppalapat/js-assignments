@@ -1,0 +1,33 @@
+<script>
+    //filter method
+
+    var students=[
+    {
+        firstname:"sai",
+        gender:"male"
+    },
+    {
+        firstname:"vinni",
+        gender:"female"
+    },
+    {
+        firstname:"phani",
+        gender:"male",
+    },
+    {
+        firstname:"ammu",
+        gender:"female",
+    },
+    
+
+]
+var output=students.filter(function(a,i){
+    if(a.gender=="male"){
+        return true
+    }
+    else{
+        return false
+    }
+})
+console.log(output)
+</script>

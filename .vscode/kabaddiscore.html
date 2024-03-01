@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        <img src="https://ssl.gstatic.com/onebox/media/sports/logos/kabaddi/uG9TfnIhwmYJ1gjmlJ7g-Q_96x96.png"/>
+                            </td>
+
+                    </td>
+                    <td> <span id="dd"></span></td>
+                    <td className="hypen">-</td>
+                    <td><span id="df"></span></td>
+                    <td>
+                        <img src="https://ssl.gstatic.com/onebox/media/sports/logos/kabaddi/q-i29ja0h-0rIt3046V0KQ_96x96.png"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                             <button onclick="titans()">Score</button>                                
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <button onclick="tamil()">Score</button>                                
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <script>
+            var c=0;
+            document.getElementById("dd").innerHTML=c
+            function titans(){
+                c++;
+                document.getElementById("dd").innerHTML=c
+            }
+            var d=0;
+            document.getElementById("df").innerHTML=d;
+
+            function tamil(){
+                d++;
+                document.getElementById("df").innerHTML=d
+            }
+        </script>
+    </body>
+</html>

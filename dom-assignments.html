@@ -1,0 +1,144 @@
+<html>
+    <head></head>
+    <body>
+        <div id="d1">
+
+        </div>
+        <!-- <table border="2px">
+            <thead>
+                <th>Name</th>
+                <th>Gender</th>
+                <th>Place</th>
+                <th>Salary</th>
+            </thead>
+            <tbody id="d1">
+
+            </tbody>
+        </table> -->
+        <!-- <h1 class="a">Hello</h1>
+        <h2 class="a">Edupoly</h2>
+        <p class="b">Training</p> -->
+        <!-- <ul>
+            <li>Apple</li>
+            <li>Mango</li>
+            <li>Orange</li>
+         </ul> -->
+         <!-- <h1>Hello</h1>
+<p>Edupoly</p>
+<p>Training</p>
+<p>Something</p> -->
+           
+         
+      <!-- <ul id="d1">
+
+      </ul> -->
+        <script>
+            // var x=document.getElementById('a');
+            // x.innerText="Welcome to Edupoly";
+            // console.dir(x)
+            // console.log(x.innerHTML);
+            // console.dir(x);
+            // console.log(x.innerHTML.toUpperCase())
+            //  var x=document.querySelector('h1');
+            //  console.log(x.innerText)
+            //  var y=document.querySelector('h2');
+            //  console.log(y.innerHTML)
+            //3 assignment
+            // var x=document.querySelectorAll("li");
+            // console.dir(x)
+            // var z=[]
+            // for(var i=0;i<=x.length-1;i++){
+            //   z.push(x[i].innerHTML)
+            // }
+            // console.log(z)
+
+            // x.forEach(function(a,i){
+            //    z.push(x[i].innerHTML)
+            // })
+            // console.log(z)
+
+
+            // Print the text inside the first paragraph element in the console.
+            // var x=document.querySelector('p');
+            // console.log(x.innerHTML)
+            // Generate HTML Elements using document object
+
+            //    var newh1=document.createElement("h1");
+            //    newh1.innerHTML="Hello DOM World!";
+            //    document.body.appendChild(newh1)
+            // //    2. Create one h1 element,put some text into it and apply red font color to it.
+            //       newh1.style.color="red";
+            // var names=["sai","vinni","swapna","srikanth","navya","sairam"];
+            // for (var i=0;i<=names.length-1;i++){
+            //     var x=document.createElement("li")
+            //     x.innerHTML=names[i];
+            //     document.getElementById('d1').appendChild(x)
+            // }
+            // 4. Take an array of numbers and create a list from it.
+
+        //    var num=[11,12,13,24,15,23];
+        //    for(var i=0;i<=num.length-1;i++){
+        //     var x=document.createElement("li");
+        //     x.innerHTML=num[i];
+        //     document.getElementById("d1").appendChild(x)
+        //    }     
+        // 5. Take an array of objects and create a table form it.
+        // var students = [
+        //                         {
+        //                         name:'jaya',
+        //                         gender:'female',
+        //                         place:'gachibowli',
+        //                         salary:20000
+        //                         },
+        //                         {
+        //                         name:'dasu',
+        //                         gender:'male',
+        //                         place:'kphb',
+        //                         salary:30000
+        //                         },
+        //                         {
+        //                         name:'swati',
+        //                         gender:'female',
+        //                         place:'pune',
+        //                         salary:40000
+        //                         },
+        //                         {
+        //                         name:'pallavi',
+        //                         gender:'female',
+        //                         place:'assam',
+        //                         salary:50000
+        //                         }
+        //                     ]
+        //               for(var i=0;i<=students.length-1;i++){
+        //                 var newtr=document.createElement("tr")
+        //                 var nametd=document.createElement("td")
+        //                 nametd.innerHTML=students[i].name
+        //                newtr.appendChild(nametd)
+        //                console.log(newtr)
+        //                var gendertd=document.createElement("td")
+        //                 gendertd.innerHTML=students[i].gender
+        //                newtr.appendChild(gendertd)
+        //                var placetd=document.createElement("td")
+        //                 placetd.innerHTML=students[i].place
+        //                newtr.appendChild(placetd)
+        //                var salarytd=document.createElement("td")
+        //                 salarytd.innerHTML=students[i].salary
+        //                newtr.appendChild(salarytd)
+        //                document.getElementById('d1').appendChild(newtr)
+        //               }      
+        // 6. Take an array of image urls and display the images in browser.
+        var images=["https://images.pexels.com/photos/1547813/pexels-photo-1547813.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+       "https://images.pexels.com/photos/3225517/pexels-photo-3225517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+         "https://images.pexels.com/photos/1366909/pexels-photo-1366909.jpeg?auto=compress&cs=tinysrgb&w=600"]
+            var newImg=document.getElementById("d1")
+           images.forEach(function(a){
+              var newimg1=document.createElement('img');
+              newimg1.src=a;
+              newImg.appendChild(newimg1)
+           })
+       6.    Generate List Elements using document object for the given Array of Objects
+
+
+            </script>
+    </body>
+</html>
